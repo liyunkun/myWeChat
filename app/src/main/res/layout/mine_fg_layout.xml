@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_userFace"
+                android:layout_width="96dp"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tv_userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/iv_userFace"
+                android:text="用户名"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_wxNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_userName"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/iv_userFace"
+                android:text="微信号" />
+
+            <ImageView
+                android:id="@+id/iv_qr_code"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="35dp"
+                android:src="@drawable/qr_code" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/ll_photo_album"
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+                <ImageView
+                    android:id="@+id/iv_photo_album"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="10dp"
+                    android:src="@drawable/photo_album" />
+
+                <TextView
+                    android:id="@+id/tv_photo_album"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:text="相册" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/ll_photo_album"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#a1a19e"></View>
+
+            <LinearLayout
+                android:id="@+id/ll_collect"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/view">
+
+                <ImageView
+                    android:id="@+id/iv_collect"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/iv_photo_album"
+                    android:padding="10dp"
+                    android:src="@drawable/collect" />
+
+                <TextView
+                    android:id="@+id/tv_collect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:text="收藏" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl3"
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_wallet"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="10dp"
+                    android:src="@drawable/photo_album" />
+
+                <TextView
+                    android:id="@+id/tv_wallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_toRightOf="@id/iv_wallet"
+                    android:gravity="center"
+                    android:text="钱包" />
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/ll2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#a1a19e"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/view1">
+
+                <ImageView
+                    android:id="@+id/iv_cardBag"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/iv_wallet"
+                    android:padding="10dp"
+                    android:src="@drawable/collect" />
+
+                <TextView
+                    android:id="@+id/tv_cardBag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/iv_wallet"
+                    android:layout_toRightOf="@id/iv_wallet"
+                    android:gravity="center"
+                    android:text="卡包" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_expression"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tv_expression"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="表情" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_setting"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_setting"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="5dp"
+                android:src="@drawable/set" />
+
+            <TextView
+                android:id="@+id/tv_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="设置" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

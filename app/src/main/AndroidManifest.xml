@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.asus.wechat">
+
+
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 监听网络的变化 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 设备休眠 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- sd卡存储 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 摄像头 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 通知震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".BmobIMApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".login.view.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="cn.bmob.newim.core.ConnectChangeReceiver">
+            <intent-filter>
+                <action android:name="cn.bmob.action.RECONNECT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="cn.bmob.newim.core.service.BmobIMService"
+            android:process=":bmobcore" />
+
+        <service
+            android:name="cn.bmob.newim.core.service.NotifyService"
+            android:process=":bmobcore" />
+        <service android:name="cn.bmob.newim.core.service.ReConnectService" />
+        <service android:name="cn.bmob.newim.core.service.HeartBeatService" />
+
+
+        <activity
+            android:name=".login.view.HomeActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".login.view.LeadActivity" />
+        <activity android:name=".login.view.RegisterActivity" />
+        <activity android:name=".login.view.LoginActivity" />
+        <activity android:name=".login.view.AreaActivity" />
+        <activity
+            android:name=".login.view.DefaultLoginActivity"
+            android:launchMode="singleTask"></activity>
+        <activity android:name=".login.view.OtherLoginActivity" />
+
+
+        <activity android:name=".homeActivity.view.activtity.mine.AccountAndSecurityActivity" />
+        <activity android:name=".homeActivity.view.activtity.mine.SettingActivity" />
+        <activity android:name=".homeActivity.view.activtity.mine.NewsActivity" />
+        <activity android:name=".homeActivity.view.activtity.mine.CollectActivity" />
+        <activity android:name=".homeActivity.view.activtity.mine.NotiToggleActivity" />
+        <activity android:name=".homeActivity.view.activtity.mine.IntimityActivity" />
+        <activity android:name=".homeActivity.view.activtity.mine.MineChatActivity" />
+        <activity android:name=".homeActivity.view.activtity.PhotoSetActivity" />
+        <activity android:name=".homeActivity.view.activtity.mine.AboutWXActivity" />
+        <activity android:name=".homeActivity.view.activtity.find.FindShakeActivity" />
+        <activity android:name=".homeActivity.view.activtity.find.FindShakeSetActivity" />
+        <activity android:name=".homeActivity.view.activtity.find.ScanCodeActivity"></activity>
+        <activity android:name=".homeActivity.view.activtity.mine.GeneralActivity" />
+        <activity android:name=".homeActivity.view.activtity.ChatActivity" />
+
+        <meta-data
+            android:name="Bmob_APP_KEY"
+            android:value="8d1f7d6d50e3ad77324f0a447d845b1d" />
+
+
+    </application>
+
+</manifest>
